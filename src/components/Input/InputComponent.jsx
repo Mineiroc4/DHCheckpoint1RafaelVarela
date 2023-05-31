@@ -1,6 +1,6 @@
 import style from "./InputComponent.module.css";
 
-function InputComponent({ title, type, value, fnOnChange }) {
+function InputComponent({ title, type, value, fnOnChange, fnOnKeyUp }) {
     return (
         <>
             <label>{title ?? "Indefinido"}</label>
@@ -10,6 +10,7 @@ function InputComponent({ title, type, value, fnOnChange }) {
                 type={type ?? "text"}
                 value={value}
                 onChange={fnOnChange}
+                onKeyUp={fnOnKeyUp}
             />
             <br />
         </>
